@@ -85,6 +85,13 @@ impl By {
         }
     }
 
+    /// Select element by partial link text.
+    pub fn PartialLinkText(text: impl Into<String>) -> Self {
+        Self {
+            selector: BySelector::PartialLinkText(text.into()),
+        }
+    }
+
     /// Select element by CSS.
     pub fn Css(css: impl Into<String>) -> Self {
         Self {
